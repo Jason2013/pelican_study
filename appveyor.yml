@@ -7,7 +7,7 @@ branches:
     
 environment:
   access_token:
-    secure: /td4BNRuZDfn1Mwzmh438Wyajg5Hx10fX3n98LWglYCIhoQzKSATEjEmc0FA62nR
+    secure: SuPPwp5Q08/oaVhCchfS4LjvpVqbM+pRKxFb9yPcTbz4pGfr9t8WoSpAR4nV/1po
 
 install:
   - C:\Python37\python -m pip install -U pip
