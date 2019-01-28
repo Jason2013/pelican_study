@@ -1,6 +1,8 @@
 # 81fae51afba4f064fdddc1cdaa8f0935ac32c46f
 # ac42f815718f4e1bd0682d3acf12d8152e0fd25e
 # 714fd47409ee3e443ab96c810b9c53fb21a7734b
+# c62af4f92c7d2d0e1044781b5098fda8e3a1335
+# https://github.com/settings/tokens/256155318
 image: Visual Studio 2015
 branches:
   only:
@@ -8,7 +10,7 @@ branches:
     
 environment:
   access_token:
-    secure: +1PDPLi8C4KZSFYzVPl9zKT+JMmRgBViVVUrGSaYqgZADu0/qYZi9cL2ZxM5cmQh
+    secure: yJAtfIbGLAVP5x/y1JOWFDnZ7iwL7suBEEzn59sqVd/KKFHxuLDpMpCii/U1RYuZ
 
 install:
   - C:\Python37\python -m pip install -U pip
