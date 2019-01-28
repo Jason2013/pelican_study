@@ -1,4 +1,5 @@
 # 81fae51afba4f064fdddc1cdaa8f0935ac32c46f
+# ac42f815718f4e1bd0682d3acf12d8152e0fd25e
 image: Visual Studio 2015
 branches:
   only:
@@ -11,8 +12,11 @@ environment:
 install:
   - C:\Python37\python -m pip install -U pip
   - C:\Python37\python -m pip install -U pelican markdown
+  - git submodule status
   - git submodule init
+  - git submodule status
   - git submodule update --remote
+  - git submodule status
   # - cinst pretzel
 
 before_build:
