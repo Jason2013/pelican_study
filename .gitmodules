@@ -1,0 +1,4 @@
+[submodule "output"]
+	path = output
+	url = https://github.com/Jason2013/pelican_study.git
+	branch = master
