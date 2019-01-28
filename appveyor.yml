@@ -30,8 +30,11 @@ on_success:
   # See http://www.appveyor.com/docs/how-to/git-push for more info
   - git config --global credential.helper store
   - git config --global user.email %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL%
+  - git config --global user.email
   - git config --global user.name %APPVEYOR_REPO_COMMIT_AUTHOR%
+  - git config --global user.name
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+  - cmd: type "$env:USERPROFILE\.git-credentials"
   - cmd: cd output
   - git add .
   - git commit -m "From Appveyor [skip appveyor]"
