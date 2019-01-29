@@ -47,4 +47,5 @@ on_success:
   # - git add .
   - git commit --allow-empty -m "From Appveyor [skip appveyor]"
   # - git push origin HEAD:master -f
-  - git push
+  - git push origin HEAD:master
+  # - git push
