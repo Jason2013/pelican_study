@@ -1,8 +1,3 @@
-# 81fae51afba4f064fdddc1cdaa8f0935ac32c46f
-# ac42f815718f4e1bd0682d3acf12d8152e0fd25e
-# 714fd47409ee3e443ab96c810b9c53fb21a7734b
-# 6f20ad77a50506cc4e1e5945bc7aa30c0476b88c
-# https://github.com/settings/tokens/256155318
 image: Visual Studio 2015
 branches:
   only:
@@ -10,7 +5,7 @@ branches:
     
 environment:
   access_token:
-    secure: lWYrWR0tY3rp4Ic1SNRSrX+F2g/+in4+DxSvAbn5Nh9xeJqPvCimjxBEAJ0rM4j/
+    secure: oOgAJEEbJNTpPO52KWA+6HPSJE/o2xfm4ztsp63V9v4V5crjgN0tOJuZDb/ho28K
 
 install:
   - C:\Python37\python -m pip install -U pip
@@ -36,7 +31,7 @@ test: off
 on_success:
   # See http://www.appveyor.com/docs/how-to/git-push for more info
   - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://8daee9405855b1e25bb82a19fcb34d7fdd9402d3:x-oauth-basic@github.com`n"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - ps: type "$env:USERPROFILE\.git-credentials"
   - git config --global user.email "%APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL%"
   - git config --global user.email
