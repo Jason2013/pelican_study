@@ -10,11 +10,11 @@ environment:
 install:
   - C:\Python37\python -m pip install -U pip
   - C:\Python37\python -m pip install -U pelican markdown
-  # - git submodule status
-  # - git submodule init
-  # - git submodule status
-  # - git submodule update --remote
-  # - git submodule status
+  - git submodule status
+  - git submodule init
+  - git submodule status
+  - git submodule update --remote
+  - git submodule status
   # - cinst pretzel
 
 before_build:
@@ -41,9 +41,9 @@ on_success:
   - git config --system -l
   - git config --global -l
   - git config --local -l
-  # - cmd: cd output
-  # - cmd: pwd
-  # - git add .
+  - cmd: cd output
+  - cmd: pwd
+  - git add .
   # - git commit --allow-empty -m "From Appveyor [skip appveyor]"
   # - git push origin HEAD:master -f
   - git push origin HEAD:source
