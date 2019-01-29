@@ -42,6 +42,10 @@ on_success:
   - git config --global user.email
   - git config --global user.name "%APPVEYOR_REPO_COMMIT_AUTHOR%"
   - git config --global user.name
+  - git config -l
+  - git config --system -l
+  - git config --global -l
+  - git config --local -l
   # - cmd: cd output
   # - cmd: pwd
   # - git add .
