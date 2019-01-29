@@ -40,7 +40,7 @@ on_success:
   - git config --global user.email
   - git config --global user.name "%APPVEYOR_REPO_COMMIT_AUTHOR%"
   - git config --global user.name
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://27e6e02d924e4006681435e540d221eaa28bac63:x-oauth-basic@github.com`n"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://jason2013:hjuivc%40Pa6@github.com`n"
   - ps: type "$env:USERPROFILE\.git-credentials"
   # - cmd: cd output
   # - cmd: pwd
