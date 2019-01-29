@@ -40,10 +40,11 @@ on_success:
   - git config --global user.email
   - git config --global user.name %APPVEYOR_REPO_COMMIT_AUTHOR%
   - git config --global user.name
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://de0a742c4dac66b77cff53af3e088ea6c159b769:x-oauth-basic@github.com`n"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://d65aa4b2904fbc6a6205717df80dae7d2c53e6f8:x-oauth-basic@github.com`n"
   - ps: type "$env:USERPROFILE\.git-credentials"
-  - cmd: cd output
-  - cmd: pwd
-  - git add .
-  - git commit -m "From Appveyor [skip appveyor]"
-  - git push origin HEAD:master -f
+  # - cmd: cd output
+  # - cmd: pwd
+  # - git add .
+  - git commit --allow-empty -m "From Appveyor [skip appveyor]"
+  # - git push origin HEAD:master -f
+  - git push
