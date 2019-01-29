@@ -45,6 +45,6 @@ on_success:
   - cmd: pwd
   - git add .
   # - git commit --allow-empty -m "From Appveyor [skip appveyor]"
-  # - git push origin HEAD:master -f
-  - git push origin HEAD:source
+  - git push origin HEAD:master -f
+  # - git push origin HEAD:source
   # - git push
