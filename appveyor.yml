@@ -36,7 +36,7 @@ test: off
 on_success:
   # See http://www.appveyor.com/docs/how-to/git-push for more info
   - git config --global credential.helper store
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://0fff9fa84c4842b083f04e5f0f1e873427d9035b:x-oauth-basic@github.com`n"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://670b168439d8bc80d10199480c5bf2c81cbf0578:x-oauth-basic@github.com`n"
   - ps: type "$env:USERPROFILE\.git-credentials"
   - git config --global user.email "%APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL%"
   - git config --global user.email
