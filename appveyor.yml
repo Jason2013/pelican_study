@@ -38,9 +38,9 @@ on_success:
   - git config --global credential.helper store
   - git config --global user.email %APPVEYOR_REPO_COMMIT_AUTHOR_EMAIL%
   - git config --global user.email
-  - git config --global user.name %APPVEYOR_REPO_COMMIT_AUTHOR%
+  - git config --global user.name "%APPVEYOR_REPO_COMMIT_AUTHOR%"
   - git config --global user.name
-  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://91545e5a200fc00f056648c2f4dbe6bfb68c51aa:x-oauth-basic@github.com`n"
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://27e6e02d924e4006681435e540d221eaa28bac63:x-oauth-basic@github.com`n"
   - ps: type "$env:USERPROFILE\.git-credentials"
   # - cmd: cd output
   # - cmd: pwd
